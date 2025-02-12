@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Tanishka</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f8e0e6;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            text-align: center;
+            background-image: linear-gradient(135deg, #ffcccc, #ff99cc, #ff66b2, #ff3385);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+        }
+
+        .container {
+            background: rgba(255, 0, 100, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+            width: 80%;
+            max-width: 600px;
+            position: absolute;
+            z-index: 1;
+            display: none; /* Hidden initially */
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        p {
+            font-size: 20px;
+            color: #fff;
+            line-height: 1.6;
+            font-family: 'Georgia', serif;
+        }
+
+        .heart-icon {
+            font-size: 40px;
+            color: #ff69b4;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+            width: 60%;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
+            text-align: center;
+            color: #ff69b4;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button:hover {
+            background-color: #ff3385;
+        }
+
+        /* Keyframes for the background gradient animation */
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="contentContainer">
+        <h1>Happy Birthday, Tanishka! 🎉</h1>
+        <p>
+            🌙 <span class="heart-icon">❤️</span> <br>
+            Like the moon that glows in the endless night,<br>
+            Your smile shines with a radiant light.<br>
+            The stars whisper your name in the skies above,<br>
+            A reminder of your warmth, your kindness, your love.<br>
+            On this day, may joy embrace you tight,<br>
+            As you shine forever, like the moon so bright. 🌙
+        </p>
+    </div>
+
+    <div>
+        <input type="text" id="loveInput" placeholder="Type 'love' to continue">
+        <button onclick="showMessage()">Submit</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            const loveInput = document.getElementById('loveInput').value.toLowerCase();
+            const contentContainer = document.getElementById('contentContainer');
+
+            if (loveInput === 'love') {
+                contentContainer.style.display = 'block'; // Show the poem and message
+            } else {
+                alert('Please type "love" to continue!');
+            }
+        }
+    </script>
+
+</body>
+</html>
